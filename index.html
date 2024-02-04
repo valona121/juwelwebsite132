@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Simple Website</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="changeContent('Home')">Home</a>
+        <a href="#" onclick="changeContent('About')">About</a>
+        <a href="#" onclick="changeContent('Contact')">Contact</a>
+    </nav>
+
+    <section id="content">
+        <p>Welcome to the simple website. Click on the links above to navigate.</p>
+    </section>
+
+    <footer>
+        &copy; 2024 Simple Website
+    </footer>
+
+    <script>
+        function changeContent(page) {
+            const content = document.getElementById('content');
+            switch (page) {
+                case 'Home':
+                    content.innerHTML = '<p>Welcome to the simple website. Click on the links above to navigate.</p>';
+                    break;
+                case 'About':
+                    content.innerHTML = '<p>This is a simple website created using HTML, CSS, and JavaScript.</p>';
+                    break;
+                case 'Contact':
+                    content.innerHTML = '<p>Contact us at: example@example.com</p>';
+                    break;
+                default:
+                    content.innerHTML = '<p>Welcome to the simple website. Click on the links above to navigate.</p>';
+            }
+        }
+    </script>
+</body>
+
+</html>
